@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/paintPFragment">
 
+    <fragment
+        android:id="@+id/paintPFragment"
+        android:name="com.example.painttracker.ui.paint.Paint.PaintPFragment"
+        android:label="fragment_paintp"
+        tools:layout="@layout/fragment_paintp" >
+        <action
+            android:id="@+id/action_paintPFragment_to_newpaintFragment"
+            app:destination="@id/newpaintFragment" />
+        <action
+            android:id="@+id/action_paintPFragment_to_paintFragment"
+            app:destination="@id/paintFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newpaintFragment"
+        android:name="com.example.painttracker.ui.paint.newpaint.newpaintFragment"
+        android:label="fragment_newpaint"
+        tools:layout="@layout/fragment_newpaint" />
+    <fragment
+        android:id="@+id/paintFragment"
+        android:name="com.example.painttracker.ui.paint.paintFragment"
+        android:label="fragment_paint"
+        tools:layout="@layout/fragment_paint" />
 </navigation>

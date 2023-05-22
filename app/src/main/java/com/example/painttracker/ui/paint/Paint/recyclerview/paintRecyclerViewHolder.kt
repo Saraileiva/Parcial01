@@ -1,4 +1,8 @@
 package com.example.painttracker.ui.paint.Paint.recyclerview
 
-class paintRecyclerViewHolder {
+import com.example.painttracker.data.model.PaintModel
+
+class paintRecyclerViewHolder(private val binding: PaintItemBiding) {
+    RecyclerView.ViewHolder(binding.root) {}
 }
+
